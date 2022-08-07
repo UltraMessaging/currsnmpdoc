@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+<meta http-equiv='CONTENT-TYPE' content='text/html' />
+<link rel='StyleSheet' href='DTDDocStyle.css' type='text/css' media='screen' />
+<link rel='StyleSheet' href='dtreeStyle.css' type='text/css' media='screen' />
+<script type='text/javascript' src='cctree.js'></script>
+<title>Ultra Messaging SNMP Agent Configuration DTD, Sep 2, 2011</title>
+</head><body>
+<h1 class='TOCTitle'>Ultra Messaging SNMP Agent Configuration DTD</h1>
+<h2 class='TOCTitle'>Sep 2, 2011</h2>
+<a href='elementsIndex.html' target='detail'>Elements' index</a><hr />
+<div class='dtree'>
+<script type='text/javascript'>
+//<!--
+eltTree = new CCTree('detail');
+eltTree.addRootNode('0','Ultra Messaging SNMP Agent Daemon','snmp.dtd.html',false,false)
+eltTree.addNode('1','daemon','snmp.dtd.html#daemon',false,false)
+eltTree.linkNodes('0','1')
+eltTree.addNode('2','log?','snmp.dtd.html#log',false,false)
+eltTree.linkNodes('1','2')
+eltTree.addNode('3','@type','snmp.dtd.html#log_type',false,false)
+eltTree.linkNodes('2','3')
+eltTree.addNode('4','@xml:space','snmp.dtd.html#log_xml:space',false,false)
+eltTree.linkNodes('2','4')
+eltTree.addNode('5','uid?','snmp.dtd.html#uid',false,false)
+eltTree.linkNodes('1','5')
+eltTree.addNode('6','gid?','snmp.dtd.html#gid',false,false)
+eltTree.linkNodes('1','6')
+eltTree.addNode('7','pidfile?','snmp.dtd.html#pidfile',false,false)
+eltTree.linkNodes('1','7')
+eltTree.addNode('8','@xml:space','snmp.dtd.html#pidfile_xml:space',false,false)
+eltTree.linkNodes('7','8')
+eltTree.addNode('9','lbm-license-file?','snmp.dtd.html#lbm-license-file',false,false)
+eltTree.linkNodes('1','9')
+eltTree.addNode('10','@xml:space','snmp.dtd.html#lbm-license-file_xml:space',false,false)
+eltTree.linkNodes('9','10')
+eltTree.linkNodes('0','6','gid')
+eltTree.addNode('11','interface','snmp.dtd.html#interface',false,false)
+eltTree.linkNodes('0','11')
+eltTree.addNode('12','lbm-config-file','snmp.dtd.html#lbm-config-file',false,false)
+eltTree.linkNodes('0','12')
+eltTree.addNode('13','@xml:space','snmp.dtd.html#lbm-config-file_xml:space',false,false)
+eltTree.linkNodes('12','13')
+eltTree.linkNodes('0','9','lbm-license-file')
+eltTree.linkNodes('0','2','log')
+eltTree.addNode('14','master-agent','snmp.dtd.html#master-agent',false,false)
+eltTree.linkNodes('0','14')
+eltTree.addNode('15','@community','snmp.dtd.html#master-agent_community',false,false)
+eltTree.linkNodes('14','15')
+eltTree.addNode('16','@port','snmp.dtd.html#master-agent_port',false,false)
+eltTree.linkNodes('14','16')
+eltTree.linkNodes('14','11','interface?')
+eltTree.addNode('17','monitor','snmp.dtd.html#monitor',false,false)
+eltTree.linkNodes('0','17')
+eltTree.addNode('18','@max-age','snmp.dtd.html#monitor_max-age',false,false)
+eltTree.linkNodes('17','18')
+eltTree.addNode('19','@purge-interval','snmp.dtd.html#monitor_purge-interval',false,false)
+eltTree.linkNodes('17','19')
+eltTree.addNode('20','@topic','snmp.dtd.html#monitor_topic',false,false)
+eltTree.linkNodes('17','20')
+eltTree.linkNodes('17','12','lbm-config-file?')
+eltTree.linkNodes('0','7','pidfile')
+eltTree.addNode('21','&lt;subagent/&gt;','snmp.dtd.html#subagent',false,false)
+eltTree.linkNodes('0','21')
+eltTree.addNode('22','@agentx-socket','snmp.dtd.html#subagent_agentx-socket',false,false)
+eltTree.linkNodes('21','22')
+eltTree.addNode('23','<b>tnwmonsnmp (root)</b>','snmp.dtd.html#tnwmonsnmp',false,false)
+eltTree.linkNodes('0','23')
+eltTree.addNode('24','<b>@version</b>','snmp.dtd.html#tnwmonsnmp_version',false,false)
+eltTree.linkNodes('23','24')
+eltTree.linkNodes('23','1','daemon?')
+eltTree.linkNodes('23','17','monitor?')
+eltTree.addNode('25','<b><i>&lt;choice&gt;</i></b>',null,true,false)
+eltTree.linkNodes('23','25')
+eltTree.linkNodes('25','14','<b>master-agent</b>')
+eltTree.linkNodes('25','21','<b>subagent</b>')
+eltTree.linkNodes('0','5','uid')
+document.write(eltTree);
+//-->
+</script>
+</div>
+</body></html>

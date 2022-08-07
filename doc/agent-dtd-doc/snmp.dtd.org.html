@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html> <head>
+<meta http-equiv='CONTENT-TYPE' content='text/html; charset=UTF-8' />
+<link rel='StyleSheet' href='DTDDocStyle.css' type='text/css' media='screen' />
+<title>Ultra Messaging SNMP Agent Daemon</title>
+</head><body>
+<p class='DTDSource'><b><code>snmp.dtd</code></b>: <a href='snmp.dtd.html'>Elements</a> - Entities - <a href='snmp.dtd.org.html'>Source</a> | <a href='intro.html'>Intro</a> - <a href='elementsIndex.html'>Index</a><br /><a href='index.html' target='_top'>FRAMES</a>&nbsp;/&nbsp;<a href='snmp.dtd.org.html' target='_top'>NO FRAMES</a></p><pre id='dtd_source'><span class="dtd_comment">&lt;!--</span>
+<span class="dtd_comment">     Configuration for the Ultra Messaging SNMP Agent Daemon.</span>
+<span class="dtd_comment">     </span><span class="dtd_dtddoc_tag">@title</span><span class="dtd_comment"> Ultra Messaging SNMP Agent Daemon</span>
+<span class="dtd_comment">     </span><span class="dtd_dtddoc_tag">@root</span><span class="dtd_comment"> tnwmonsnmp</span>
+<span class="dtd_comment">--&gt;</span>
+<span class="dtd_comment">&lt;!-- The root element of the Ultra Messaging SNMP agent configuration. --&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">tnwmonsnmp</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">daemon</span><span class="dtd_plain">?, </span><span class="dtd_attribute_name">monitor</span><span class="dtd_plain">?, (</span><span class="dtd_attribute_name">master-agent</span><span class="dtd_plain">|</span><span class="dtd_attribute_name">subagent</span><span class="dtd_plain">))</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- </span><span class="dtd_dtddoc_tag">@attr version</span><span class="dtd_comment"> Ultra Messaging SNMP Agent DTD version used. --&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ATTLIST</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">tnwmonsnmp</span>
+<span class="dtd_plain">          </span><span class="dtd_attribute_name">version</span><span class="dtd_plain"> (1.0) </span><span class="dtd_keyword">#REQUIRED</span>
+<span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- Specifies the global daemon configuration. --&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">daemon</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">log</span><span class="dtd_plain">?, </span><span class="dtd_attribute_name">uid</span><span class="dtd_plain">?, </span><span class="dtd_attribute_name">gid</span><span class="dtd_plain">?, </span><span class="dtd_attribute_name">pidfile</span><span class="dtd_plain">?, </span><span class="dtd_attribute_name">lbm-license-file</span><span class="dtd_plain">?)</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- Indicates the file where log messages are sent. --&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">log</span><span class="dtd_plain"> ( </span><span class="dtd_keyword">#PCDATA</span><span class="dtd_plain"> )</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!--</span>
+<span class="dtd_comment">      </span><span class="dtd_dtddoc_tag">@attr type</span><span class="dtd_comment"> Type of logging. For syslog and console, the filename is ignored.</span>
+<span class="dtd_comment">      </span><span class="dtd_dtddoc_tag">@attr xml:space</span><span class="dtd_comment"> How whitespace is to be handled. &quot;default&quot; trims leading</span>
+<span class="dtd_comment">            and trailing whitespace, and compress multiple whitespace characters</span>
+<span class="dtd_comment">            into a single character. &quot;preserve&quot; preserves the whitespace exactly</span>
+<span class="dtd_comment">            as read.</span>
+<span class="dtd_comment">--&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ATTLIST</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">log</span>
+<span class="dtd_plain">          </span><span class="dtd_attribute_name">type</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">file</span><span class="dtd_plain"> | </span><span class="dtd_attribute_name">syslog</span><span class="dtd_plain"> | </span><span class="dtd_attribute_name">console</span><span class="dtd_plain">) </span><span class="dtd_attribute_value">&quot;console&quot;</span>
+<span class="dtd_plain">          </span><span class="dtd_attribute_name">xml:space</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">default</span><span class="dtd_plain"> | </span><span class="dtd_attribute_name">preserve</span><span class="dtd_plain">) </span><span class="dtd_attribute_value">&quot;default&quot;</span>
+<span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- Pathname for daemon process ID (PID) file. --&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">pidfile</span><span class="dtd_plain"> ( </span><span class="dtd_keyword">#PCDATA</span><span class="dtd_plain"> )</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!--</span>
+<span class="dtd_comment">      </span><span class="dtd_dtddoc_tag">@attr xml:space</span><span class="dtd_comment"> How whitespace is to be handled. &quot;default&quot; trims leading</span>
+<span class="dtd_comment">            and trailing whitespace, and compress multiple whitespace characters</span>
+<span class="dtd_comment">            into a single character. &quot;preserve&quot; preserves the whitespace exactly</span>
+<span class="dtd_comment">            as read.</span>
+<span class="dtd_comment">--&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ATTLIST</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">pidfile</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">xml:space</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">default</span><span class="dtd_plain"> | </span><span class="dtd_attribute_name">preserve</span><span class="dtd_plain">) </span><span class="dtd_attribute_value">&quot;default&quot;</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- User ID (UID) for daemon process (if run as root) --&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">uid</span><span class="dtd_plain"> ( </span><span class="dtd_keyword">#PCDATA</span><span class="dtd_plain"> )</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- Group ID (GID) for daemon process (if run as root) --&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">gid</span><span class="dtd_plain"> ( </span><span class="dtd_keyword">#PCDATA</span><span class="dtd_plain"> )</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- Specifies the LBM license file. --&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">lbm-license-file</span><span class="dtd_plain"> ( </span><span class="dtd_keyword">#PCDATA</span><span class="dtd_plain"> )</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!--</span>
+<span class="dtd_comment">      </span><span class="dtd_dtddoc_tag">@attr xml:space</span><span class="dtd_comment"> How whitespace is to be handled. &quot;default&quot; trims leading</span>
+<span class="dtd_comment">            and trailing whitespace, and compress multiple whitespace characters</span>
+<span class="dtd_comment">            into a single character. &quot;preserve&quot; preserves the whitespace exactly</span>
+<span class="dtd_comment">            as read.</span>
+<span class="dtd_comment">--&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ATTLIST</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">lbm-license-file</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">xml:space</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">default</span><span class="dtd_plain"> | </span><span class="dtd_attribute_name">preserve</span><span class="dtd_plain">) </span><span class="dtd_attribute_value">&quot;default&quot;</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- Monitoring configuration. --&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">monitor</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">lbm-config-file</span><span class="dtd_plain">?)</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!--</span>
+<span class="dtd_comment">      </span><span class="dtd_dtddoc_tag">@attr max-age</span><span class="dtd_comment"> Maximum age (in seconds) of a statistics entry with no updates before it is purged.</span>
+<span class="dtd_comment">      </span><span class="dtd_dtddoc_tag">@attr purge-interval</span><span class="dtd_comment"> Interval (in seconds) between purge checks.</span>
+<span class="dtd_comment">      </span><span class="dtd_dtddoc_tag">@attr topic</span><span class="dtd_comment"> Topic on which statistics are delivered.</span>
+<span class="dtd_comment">--&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ATTLIST</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">monitor</span>
+<span class="dtd_plain">          </span><span class="dtd_attribute_name">max-age</span><span class="dtd_plain"> </span><span class="dtd_keyword">CDATA</span><span class="dtd_plain"> </span><span class="dtd_attribute_value">&quot;60&quot;</span>
+<span class="dtd_plain">          </span><span class="dtd_attribute_name">purge-interval</span><span class="dtd_plain"> </span><span class="dtd_keyword">CDATA</span><span class="dtd_plain"> </span><span class="dtd_attribute_value">&quot;15&quot;</span>
+<span class="dtd_plain">          </span><span class="dtd_attribute_name">topic</span><span class="dtd_plain"> </span><span class="dtd_keyword">CDATA</span><span class="dtd_plain"> </span><span class="dtd_attribute_value">&quot;/29west/statistics&quot;</span>
+<span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- UM configuration file to be used for monitoring. --&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">lbm-config-file</span><span class="dtd_plain"> ( </span><span class="dtd_keyword">#PCDATA</span><span class="dtd_plain"> )</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!--</span>
+<span class="dtd_comment">      </span><span class="dtd_dtddoc_tag">@attr xml:space</span><span class="dtd_comment"> How whitespace is to be handled. &quot;default&quot; trims leading</span>
+<span class="dtd_comment">            and trailing whitespace, and compress multiple whitespace characters</span>
+<span class="dtd_comment">            into a single character. &quot;preserve&quot; preserves the whitespace exactly</span>
+<span class="dtd_comment">            as read.</span>
+<span class="dtd_comment">--&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ATTLIST</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">lbm-config-file</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">xml:space</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">default</span><span class="dtd_plain"> | </span><span class="dtd_attribute_name">preserve</span><span class="dtd_plain">) </span><span class="dtd_attribute_value">&quot;default&quot;</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- SNMP master agent configuration. --&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">master-agent</span><span class="dtd_plain"> (</span><span class="dtd_attribute_name">interface</span><span class="dtd_plain">?)</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!--</span>
+<span class="dtd_comment">      </span><span class="dtd_dtddoc_tag">@attr community</span><span class="dtd_comment"> SNMP V2c RO community name</span>
+<span class="dtd_comment">      </span><span class="dtd_dtddoc_tag">@attr port</span><span class="dtd_comment"> UDP port on which to receive SNMP queries</span>
+<span class="dtd_comment">--&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ATTLIST</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">master-agent</span>
+<span class="dtd_plain">          </span><span class="dtd_attribute_name">community</span><span class="dtd_plain"> </span><span class="dtd_keyword">CDATA</span><span class="dtd_plain"> </span><span class="dtd_attribute_value">&quot;public&quot;</span>
+<span class="dtd_plain">          </span><span class="dtd_attribute_name">port</span><span class="dtd_plain"> </span><span class="dtd_keyword">CDATA</span><span class="dtd_plain"> </span><span class="dtd_attribute_value">&quot;11161&quot;</span>
+<span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- Interface to which to bind the listening SNMP port. --&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">interface</span><span class="dtd_plain"> ( </span><span class="dtd_keyword">#PCDATA</span><span class="dtd_plain"> )</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- SNMP subagent configuration. --&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ELEMENT</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">subagent</span><span class="dtd_plain"> </span><span class="dtd_keyword">EMPTY</span><span class="dtd_tag_symbols">&gt;</span>
+<span class="dtd_comment">&lt;!-- </span><span class="dtd_dtddoc_tag">@attr agentx-socket</span><span class="dtd_comment"> Socket used to communicate with master agent.</span>
+<span class="dtd_comment">           For Windows, this defaults to tcp:localhost:705, and</span>
+<span class="dtd_comment">           for Unix/Linux this defaults to unix:/var/agentx/master.--&gt;</span>
+<span class="dtd_tag_symbols">&lt;!</span><span class="dtd_tag_name">ATTLIST</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">subagent</span><span class="dtd_plain"> </span><span class="dtd_attribute_name">agentx-socket</span><span class="dtd_plain"> </span><span class="dtd_keyword">CDATA</span><span class="dtd_plain"> </span><span class="dtd_attribute_value">&quot;unix:/var/agentx/master&quot;</span><span class="dtd_tag_symbols">&gt;</span>
+</pre>
+</body></html>

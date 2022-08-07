@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+<meta http-equiv='CONTENT-TYPE' content='text/html; charset=UTF-8' />
+<link rel='StyleSheet' href='DTDDocStyle.css' type='text/css' media='screen' />
+<title>Ultra Messaging SNMP Agent Daemon</title>
+</head><body>
+<p class='DTDSource'><b><code>snmp.dtd</code></b>: <a href='snmp.dtd.html'>Elements</a> - Entities - <a href='snmp.dtd.org.html'>Source</a> | <a href='intro.html'>Intro</a> - <a href='elementsIndex.html'>Index</a><br /><a href='index.html' target='_top'>FRAMES</a>&nbsp;/&nbsp;<a href='snmp.dtd.html' target='_top'>NO FRAMES</a></p><h1>Ultra Messaging SNMP Agent Daemon</h1>
+<p>Configuration for the Ultra Messaging SNMP Agent Daemon.</p><br />
+<a name='tnwmonsnmp'></a>
+<br /><table class='elementTitle' summary="tnwmonsnmp"><tr><td class='leftElementTitle'>
+&lt;tnwmonsnmp&gt;</td><td class='rightElementTitle'>
+Root element
+</td></tr></table>
+<p>The root element of the Ultra Messaging SNMP agent configuration.</p><blockquote><table summary='element info'><tr>
+<td class='construct'><table summary="&lt;tnwmonsnmp&gt;'s children">
+<thead>
+<tr><th class='title' colspan='2'>&lt;tnwmonsnmp&gt;'s children</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+<tr><th class='subtitle'>Name</th><th class='subtitle'>Cardinality</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+</thead>
+<tbody><tr><td><a href='#daemon'>daemon</a></td><td>One or none</td></tr>
+<tr><td><a href='#master-agent'>master-agent</a></td><td>One or none</td></tr>
+<tr><td><a href='#monitor'>monitor</a></td><td>One or none</td></tr>
+<tr><td><a href='#subagent'>subagent</a></td><td>One or none</td></tr>
+</tbody></table></td><td class='construct'><table  summary="&lt;tnwmonsnmp&gt;'s attributes"><tr>
+<th class='title' colspan='3'>&lt;tnwmonsnmp&gt;'s attributes</th>
+</tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr>
+<th class='subtitle'>Name</th><th class='subtitle'>Values</th><th class='subtitle'>Default</th></tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr><td><a href='#tnwmonsnmp_version'>version</a></td><td>1.0</td><td></td></tr></table></td></tr></table></blockquote>
+<span class='inTextTitle'>Element's model:</span><p class='model'>(<a href='#daemon'>daemon</a>?, <a href='#monitor'>monitor</a>?, (<a href='#master-agent'>master-agent</a> | <a href='#subagent'>subagent</a>))</p><a name='tnwmonsnmp_version'></a>
+<br /><table class='attributeTitle' summary="version"><tr><td class='leftAttributeTitle'>
+@version</td><td class='rightAttributeTitle'>
+Attribute of <a href='#tnwmonsnmp'>tnwmonsnmp</a>
+</td></tr></table>
+<p>Ultra Messaging SNMP Agent DTD version used.</p><p><span class='inTextTitle'>Possible values</span>: 1.0 - <span class='inTextTitle'>Required</span></p><a name='daemon'></a>
+<br /><table class='elementTitle' summary="daemon"><tr><td class='leftElementTitle'>
+&lt;daemon&gt;</td><td class='rightElementTitle'>
+Child of <a href='#tnwmonsnmp'>tnwmonsnmp</a>
+</td></tr></table>
+<p>Specifies the global daemon configuration.</p><blockquote><table summary='element info'><tr>
+<td class='construct'><table summary="&lt;daemon&gt;'s children">
+<thead>
+<tr><th class='title' colspan='2'>&lt;daemon&gt;'s children</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+<tr><th class='subtitle'>Name</th><th class='subtitle'>Cardinality</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+</thead>
+<tbody><tr><td><a href='#gid'>gid</a></td><td>One or none</td></tr>
+<tr><td><a href='#lbm-license-file'>lbm-license-file</a></td><td>One or none</td></tr>
+<tr><td><a href='#log'>log</a></td><td>One or none</td></tr>
+<tr><td><a href='#pidfile'>pidfile</a></td><td>One or none</td></tr>
+<tr><td><a href='#uid'>uid</a></td><td>One or none</td></tr>
+</tbody></table></td></tr></table></blockquote>
+<span class='inTextTitle'>Element's model:</span><p class='model'>(<a href='#log'>log</a>?, <a href='#uid'>uid</a>?, <a href='#gid'>gid</a>?, <a href='#pidfile'>pidfile</a>?, <a href='#lbm-license-file'>lbm-license-file</a>?)</p><a name='log'></a>
+<br /><table class='elementTitle' summary="log"><tr><td class='leftElementTitle'>
+&lt;log&gt;</td><td class='rightElementTitle'>
+Child of <a href='#daemon'>daemon</a>
+</td></tr></table>
+<p>Indicates the file where log messages are sent.</p><blockquote><table summary='element info'><tr>
+<td class='construct'><table  summary="&lt;log&gt;'s attributes"><tr>
+<th class='title' colspan='3'>&lt;log&gt;'s attributes</th>
+</tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr>
+<th class='subtitle'>Name</th><th class='subtitle'>Values</th><th class='subtitle'>Default</th></tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr><td><a href='#log_type'>type</a></td><td>file, syslog, console</td><td>console</td></tr><tr><td><a href='#log_xml:space'>xml:space</a></td><td>default, preserve</td><td>default</td></tr></table></td></tr></table></blockquote>
+<a name='log_type'></a>
+<br /><table class='attributeTitle' summary="type"><tr><td class='leftAttributeTitle'>
+@type</td><td class='rightAttributeTitle'>
+Attribute of <a href='#log'>log</a>
+</td></tr></table>
+<p>Type of logging. For syslog and console, the filename is ignored.</p><p><span class='inTextTitle'>Possible values</span>: file, syslog, console - <span class='inTextTitle'>Default value</span>: console</p><a name='log_xml:space'></a>
+<br /><table class='attributeTitle' summary="xml:space"><tr><td class='leftAttributeTitle'>
+@xml:space</td><td class='rightAttributeTitle'>
+Attribute of <a href='#log'>log</a>
+</td></tr></table>
+<p>How whitespace is to be handled. "default" trims leading
+and trailing whitespace, and compress multiple whitespace characters
+into a single character. "preserve" preserves the whitespace exactly
+as read.</p><p><span class='inTextTitle'>Possible values</span>: default, preserve - <span class='inTextTitle'>Default value</span>: default</p><a name='pidfile'></a>
+<br /><table class='elementTitle' summary="pidfile"><tr><td class='leftElementTitle'>
+&lt;pidfile&gt;</td><td class='rightElementTitle'>
+Child of <a href='#daemon'>daemon</a>
+</td></tr></table>
+<p>Pathname for daemon process ID (PID) file.</p><blockquote><table summary='element info'><tr>
+<td class='construct'><table  summary="&lt;pidfile&gt;'s attributes"><tr>
+<th class='title' colspan='3'>&lt;pidfile&gt;'s attributes</th>
+</tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr>
+<th class='subtitle'>Name</th><th class='subtitle'>Values</th><th class='subtitle'>Default</th></tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr><td><a href='#pidfile_xml:space'>xml:space</a></td><td>default, preserve</td><td>default</td></tr></table></td></tr></table></blockquote>
+<a name='pidfile_xml:space'></a>
+<br /><table class='attributeTitle' summary="xml:space"><tr><td class='leftAttributeTitle'>
+@xml:space</td><td class='rightAttributeTitle'>
+Attribute of <a href='#pidfile'>pidfile</a>
+</td></tr></table>
+<p>How whitespace is to be handled. "default" trims leading
+and trailing whitespace, and compress multiple whitespace characters
+into a single character. "preserve" preserves the whitespace exactly
+as read.</p><p><span class='inTextTitle'>Possible values</span>: default, preserve - <span class='inTextTitle'>Default value</span>: default</p><a name='uid'></a>
+<br /><table class='elementTitle' summary="uid"><tr><td class='leftElementTitle'>
+&lt;uid&gt;</td><td class='rightElementTitle'>
+Child of <a href='#daemon'>daemon</a>
+</td></tr></table>
+<p>User ID (UID) for daemon process (if run as root)</p><a name='gid'></a>
+<br /><table class='elementTitle' summary="gid"><tr><td class='leftElementTitle'>
+&lt;gid&gt;</td><td class='rightElementTitle'>
+Child of <a href='#daemon'>daemon</a>
+</td></tr></table>
+<p>Group ID (GID) for daemon process (if run as root)</p><a name='lbm-license-file'></a>
+<br /><table class='elementTitle' summary="lbm-license-file"><tr><td class='leftElementTitle'>
+&lt;lbm-license-file&gt;</td><td class='rightElementTitle'>
+Child of <a href='#daemon'>daemon</a>
+</td></tr></table>
+<p>Specifies the LBM license file.</p><blockquote><table summary='element info'><tr>
+<td class='construct'><table  summary="&lt;lbm-license-file&gt;'s attributes"><tr>
+<th class='title' colspan='3'>&lt;lbm-license-file&gt;'s attributes</th>
+</tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr>
+<th class='subtitle'>Name</th><th class='subtitle'>Values</th><th class='subtitle'>Default</th></tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr><td><a href='#lbm-license-file_xml:space'>xml:space</a></td><td>default, preserve</td><td>default</td></tr></table></td></tr></table></blockquote>
+<a name='lbm-license-file_xml:space'></a>
+<br /><table class='attributeTitle' summary="xml:space"><tr><td class='leftAttributeTitle'>
+@xml:space</td><td class='rightAttributeTitle'>
+Attribute of <a href='#lbm-license-file'>lbm-license-file</a>
+</td></tr></table>
+<p>How whitespace is to be handled. "default" trims leading
+and trailing whitespace, and compress multiple whitespace characters
+into a single character. "preserve" preserves the whitespace exactly
+as read.</p><p><span class='inTextTitle'>Possible values</span>: default, preserve - <span class='inTextTitle'>Default value</span>: default</p><a name='monitor'></a>
+<br /><table class='elementTitle' summary="monitor"><tr><td class='leftElementTitle'>
+&lt;monitor&gt;</td><td class='rightElementTitle'>
+Child of <a href='#tnwmonsnmp'>tnwmonsnmp</a>
+</td></tr></table>
+<p>Monitoring configuration.</p><blockquote><table summary='element info'><tr>
+<td class='construct'><table summary="&lt;monitor&gt;'s children">
+<thead>
+<tr><th class='title' colspan='2'>&lt;monitor&gt;'s children</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+<tr><th class='subtitle'>Name</th><th class='subtitle'>Cardinality</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+</thead>
+<tbody><tr><td><a href='#lbm-config-file'>lbm-config-file</a></td><td>One or none</td></tr>
+</tbody></table></td><td class='construct'><table  summary="&lt;monitor&gt;'s attributes"><tr>
+<th class='title' colspan='3'>&lt;monitor&gt;'s attributes</th>
+</tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr>
+<th class='subtitle'>Name</th><th class='subtitle'>Values</th><th class='subtitle'>Default</th></tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr><td><a href='#monitor_max-age'>max-age</a></td><td></td><td>60</td></tr><tr><td><a href='#monitor_purge-interval'>purge-interval</a></td><td></td><td>15</td></tr><tr><td><a href='#monitor_topic'>topic</a></td><td></td><td>/29west/statistics</td></tr></table></td></tr></table></blockquote>
+<span class='inTextTitle'>Element's model:</span><p class='model'>(<a href='#lbm-config-file'>lbm-config-file</a>?)</p><a name='monitor_max-age'></a>
+<br /><table class='attributeTitle' summary="max-age"><tr><td class='leftAttributeTitle'>
+@max-age</td><td class='rightAttributeTitle'>
+Attribute of <a href='#monitor'>monitor</a>
+</td></tr></table>
+<p>Maximum age (in seconds) of a statistics entry with no updates before it is purged.</p><p><span class='inTextTitle'>Default value</span>: 60</p><a name='monitor_purge-interval'></a>
+<br /><table class='attributeTitle' summary="purge-interval"><tr><td class='leftAttributeTitle'>
+@purge-interval</td><td class='rightAttributeTitle'>
+Attribute of <a href='#monitor'>monitor</a>
+</td></tr></table>
+<p>Interval (in seconds) between purge checks.</p><p><span class='inTextTitle'>Default value</span>: 15</p><a name='monitor_topic'></a>
+<br /><table class='attributeTitle' summary="topic"><tr><td class='leftAttributeTitle'>
+@topic</td><td class='rightAttributeTitle'>
+Attribute of <a href='#monitor'>monitor</a>
+</td></tr></table>
+<p>Topic on which statistics are delivered.</p><p><span class='inTextTitle'>Default value</span>: /29west/statistics</p><a name='lbm-config-file'></a>
+<br /><table class='elementTitle' summary="lbm-config-file"><tr><td class='leftElementTitle'>
+&lt;lbm-config-file&gt;</td><td class='rightElementTitle'>
+Child of <a href='#monitor'>monitor</a>
+</td></tr></table>
+<p>UM configuration file to be used for monitoring.</p><blockquote><table summary='element info'><tr>
+<td class='construct'><table  summary="&lt;lbm-config-file&gt;'s attributes"><tr>
+<th class='title' colspan='3'>&lt;lbm-config-file&gt;'s attributes</th>
+</tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr>
+<th class='subtitle'>Name</th><th class='subtitle'>Values</th><th class='subtitle'>Default</th></tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr><td><a href='#lbm-config-file_xml:space'>xml:space</a></td><td>default, preserve</td><td>default</td></tr></table></td></tr></table></blockquote>
+<a name='lbm-config-file_xml:space'></a>
+<br /><table class='attributeTitle' summary="xml:space"><tr><td class='leftAttributeTitle'>
+@xml:space</td><td class='rightAttributeTitle'>
+Attribute of <a href='#lbm-config-file'>lbm-config-file</a>
+</td></tr></table>
+<p>How whitespace is to be handled. "default" trims leading
+and trailing whitespace, and compress multiple whitespace characters
+into a single character. "preserve" preserves the whitespace exactly
+as read.</p><p><span class='inTextTitle'>Possible values</span>: default, preserve - <span class='inTextTitle'>Default value</span>: default</p><a name='master-agent'></a>
+<br /><table class='elementTitle' summary="master-agent"><tr><td class='leftElementTitle'>
+&lt;master-agent&gt;</td><td class='rightElementTitle'>
+Child of <a href='#tnwmonsnmp'>tnwmonsnmp</a>
+</td></tr></table>
+<p>SNMP master agent configuration.</p><blockquote><table summary='element info'><tr>
+<td class='construct'><table summary="&lt;master-agent&gt;'s children">
+<thead>
+<tr><th class='title' colspan='2'>&lt;master-agent&gt;'s children</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+<tr><th class='subtitle'>Name</th><th class='subtitle'>Cardinality</th></tr>
+<tr><th colspan='2' height='1' class='ruler'></th></tr>
+</thead>
+<tbody><tr><td><a href='#interface'>interface</a></td><td>One or none</td></tr>
+</tbody></table></td><td class='construct'><table  summary="&lt;master-agent&gt;'s attributes"><tr>
+<th class='title' colspan='3'>&lt;master-agent&gt;'s attributes</th>
+</tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr>
+<th class='subtitle'>Name</th><th class='subtitle'>Values</th><th class='subtitle'>Default</th></tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr><td><a href='#master-agent_community'>community</a></td><td></td><td>public</td></tr><tr><td><a href='#master-agent_port'>port</a></td><td></td><td>11161</td></tr></table></td></tr></table></blockquote>
+<span class='inTextTitle'>Element's model:</span><p class='model'>(<a href='#interface'>interface</a>?)</p><a name='master-agent_community'></a>
+<br /><table class='attributeTitle' summary="community"><tr><td class='leftAttributeTitle'>
+@community</td><td class='rightAttributeTitle'>
+Attribute of <a href='#master-agent'>master-agent</a>
+</td></tr></table>
+<p>SNMP V2c RO community name</p><p><span class='inTextTitle'>Default value</span>: public</p><a name='master-agent_port'></a>
+<br /><table class='attributeTitle' summary="port"><tr><td class='leftAttributeTitle'>
+@port</td><td class='rightAttributeTitle'>
+Attribute of <a href='#master-agent'>master-agent</a>
+</td></tr></table>
+<p>UDP port on which to receive SNMP queries</p><p><span class='inTextTitle'>Default value</span>: 11161</p><a name='interface'></a>
+<br /><table class='elementTitle' summary="interface"><tr><td class='leftElementTitle'>
+&lt;interface&gt;</td><td class='rightElementTitle'>
+Child of <a href='#master-agent'>master-agent</a>
+</td></tr></table>
+<p>Interface to which to bind the listening SNMP port.</p><a name='subagent'></a>
+<br /><table class='elementTitle' summary="subagent"><tr><td class='leftElementTitle'>
+&lt;subagent/&gt;</td><td class='rightElementTitle'>
+Child of <a href='#tnwmonsnmp'>tnwmonsnmp</a>
+</td></tr></table>
+<p>SNMP subagent configuration.</p><blockquote>
+<table  summary="&lt;subagent&gt;'s attributes"><tr>
+<th class='title' colspan='3'>&lt;subagent&gt;'s attributes</th>
+</tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr>
+<th class='subtitle'>Name</th><th class='subtitle'>Values</th><th class='subtitle'>Default</th></tr>
+<tr><th colspan='3' height='1' class='ruler'></th></tr>
+<tr><td><a href='#subagent_agentx-socket'>agentx-socket</a></td><td></td><td>unix:/var/agentx/master</td></tr></table></blockquote>
+<p class='emptyTagNote'>This element is always empty.</p><a name='subagent_agentx-socket'></a>
+<br /><table class='attributeTitle' summary="agentx-socket"><tr><td class='leftAttributeTitle'>
+@agentx-socket</td><td class='rightAttributeTitle'>
+Attribute of <a href='#subagent'>subagent</a>
+</td></tr></table>
+<p>Socket used to communicate with master agent.
+For Windows, this defaults to tcp:localhost:705, and
+for Unix/Linux this defaults to unix:/var/agentx/master.</p><p><span class='inTextTitle'>Default value</span>: unix:/var/agentx/master</p></body></html>
